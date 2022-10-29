@@ -1,0 +1,82 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.theme-light {
+  --background: #ffffff;
+  --text: #000000;
+  --switchText: #ffffff;
+  --switchBackground: #000000;
+  --secondaryBackground: #b2b2b2;
+  --tertiaryBackground: #78a184;
+}
+
+.theme-dark {
+  --background: #000000;
+  --text: #ffffff;
+  --inputText: #000000;
+  --switchText: #000000;
+  --switchBackground: #ffffff;
+  --secondaryBackground: #645858FF;
+  --tertiaryBackground: #1e3825;
+}
+
+.form-container {
+  @apply p-5 border rounded-xl shadow-2xl w-full h-36 ;
+  @apply md:w-full;
+  @apply sm:w-1/2;
+}
+
+.task-container {
+  @apply p-5 border rounded-xl shadow-2xl w-full  md:w-1/2;
+}
+
+.form-input {
+  @apply border py-2 px-3 rounded-xl;
+
+}
+
+.form-control {
+  @apply border py-2 px-3 rounded-xl mt-2;
+}
+
+.is-complete {
+  @apply bg-green-600 bg-opacity-30 ;
+}
+
+.is-blocked {
+  @apply bg-blue-600 bg-opacity-30 ;
+}
+
+.is-complete > div:nth-child(2) {
+  @apply line-through font-bold;
+}
+
+.is-blocked > div {
+  @apply italic font-bold;
+}
+
+.btn-main {
+  @apply ring ring-offset-fuchsia-600 w-[100px] p-1 mr-2 opacity-70 rounded-2xl border-2 border animate-pulse cursor-pointer;
+}
+
+.btn-color-delete {
+  @apply border-red-400 bg-red-300 font-bold text-red-900;
+}
+
+.btn-color-add {
+  @apply border-emerald-400 bg-emerald-300 font-bold text-emerald-900;
+}
+
+.btn-color-block {
+  @apply border-blue-400 bg-blue-300 font-bold text-blue-900;
+}
+
+.btn-edit {
+  @apply text-cyan-900 font-bold cursor-pointer border-cyan-200 bg-cyan-100 -right-6 -top-3 absolute rounded-full w-[50px] h-[50px] p-1 opacity-90 border-2 border animate-pulse;
+}
+
+.btn-confirm{
+  @apply text-black border border-gray-100 bg-green-200;
+}
